@@ -11,4 +11,6 @@ Zipped files include the USBKext and a port layout file to show all available po
 
 | File | Motherboard | SMBIOS | Credits |
 | :------- | :---------- | :---------- | :---------- |
+|`Pro WS X299 Sage II.zip` | ASUS Pro WS X299 Sage II | MacPro7,1 | Shinoki7
+|`Rampage VI Extreme Encore.zip` | ASUS Rampage VI Extreme Encore | MacPro7,1 | Shinoki7
 |`WSX299Sage10G.zip` | ASUS WS X299 Sage/10G | MacPro7,1 | Shinoki7

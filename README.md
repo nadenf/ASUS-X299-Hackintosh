@@ -6,8 +6,8 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 # Folders
 | Folder | Description |
 | :------------- | :---------- |
-| Custom BIOS Collection | Contains modified BIOS files that have custom boot logos |
 | BASE-EFI | OpenCore EFIs with the OpenCanary GUI that should be valid for all ASUS X299 boards.|
+| Custom BIOS Collection | Contains modified BIOS files that have custom boot logos |
 | EFI-Validated-Distributions | Validated EFIs from other users (Please use this as a reference only) | 
 | XHC USB Kexts | USB kexts created by users for specific motherboards.  Please use [this](https://dortania.github.io/USB-Map-Guide/) as a proper guide to map your USB ports. |
 
