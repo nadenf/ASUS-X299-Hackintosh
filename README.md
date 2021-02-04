@@ -40,8 +40,7 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 * Wifi and Bluetooth (Using natively supported Broadcom BCM943602CDP)
 * Handoff, Continuity, AirDrop, Continuity Camera, and Unlock with Apple Watch
 * iMessage, FaceTime, App Store, iTunes Store
-* Ethernet
-* 10Gb Ethernet
+* 2.5 Gb Ethernet
 * HEVC, H.264
 * Onboard audio
 * TRIM
@@ -70,7 +69,7 @@ The ASUS WS X299 Sage series (WS X299 Sage, WS X299 Sage/10G, Pro WS X299 Sage I
     * NOTE: Wake from Bluetooth devices does not work with this so it's best to connect Bluetooth to one of the motherboard ports.
 
 # Base EFI Configuration
-The Base EFI folder contains a prebuilt EFI that should be valid for all ASUS X299 motherboards.  It is currently built using OpenCore 0.6.0 with the OpenCanary GUI enabled following the Dortania OpenCore Vanilla Guide.
+The Base EFI folder contains a prebuilt EFI that should be valid for all ASUS X299 motherboards.  It is currently built using OpenCore 0.6.6 with the OpenCanary GUI enabled following the Dortania OpenCore Vanilla Guide.
 
 ## 1. Important BIOS Settings
 * Above 4G Encoding: Enabled
@@ -81,13 +80,8 @@ The Base EFI folder contains a prebuilt EFI that should be valid for all ASUS X2
 1. Ethernet: 
     * For WS X299 Sage/10G users replace IntelMausi with [SmallTreeIntel8259x](https://small-tree.com/support/downloads/10-gigabit-ethernet-driver-download-page/) kext and update the kext entry.  NOTE: Requires Ubuntu EEPROM modding outlined in @KGPs [guide section E.8.2.2](https://www.tonymacx86.com/threads/how-to-build-your-own-imac-pro-successful-build-extended-guide.229353/)
     * For users with I211 NICs like the X299 Deluxe, copy the [SmallTreeIntel82576](https://github.com/khronokernel/SmallTree-I211-AT-patch/releases) kext to your EFI folder and add a new kext entry under `Kernel-Add`
-2. TSCAdjustReset:
-    * From the Kexts-TSCAdjustReset [folder](https://github.com/shinoki7/Asus-X299-Hackintosh/tree/master/Kexts/TSCAdjustReset), download the zip with the number of cores your processor and extract the file.  Copy this file to your EFI folder under `EFI-OC-Kexts`
-4. SSDT-RTC0: 
-    * By default, the Base-EFI folder assumes you're on the latest BIOS and has SSDT-RTC0.aml enabled.  If you're on a pre Cascade Lake X motherboard and BIOS version below 3000 (i.e 2002) replace SSDT-RTC0.aml in your EFI folder with [SSDT-RTC0-NOAWAC.aml](https://github.com/shinoki7/Asus-X299-Hackintosh/blob/master/SSDT/SSDT-RTC0-NOAWAC.aml) and rename to SSDT-RTC0.aml
-5. CFG Lock:
-    * By default, the Base-EFI folder assumes you're on the latest BIOS. 
-6. PlatformInfo: 
+2. PlatformInfo: 
+    The Base EFI contains two config.plist depending on which SMBIOS you choose.  Rename the SMBIOS you prefer to 'config.plist' and delete the other one.  
     You will need to create your own Serial Number and SMUUID.  Instructions can be found [here](https://dortania.github.io/OpenCore-Desktop-Guide/config-HEDT/skylake-x.html#platforminfo)
     * Remember to adjust the Type depending on which SMBIOS you are using.  Either iMacPro1,1 or MacPro7,1
     * NOTE: MacPro7,1 only works on Catalina and higher.
@@ -96,7 +90,7 @@ The Base EFI folder contains a prebuilt EFI that should be valid for all ASUS X2
             * MLB: Board Serial
             * SystemSerialNumber: Serial
             * SystemUUID: SmUUID
-6. Post-Install
+3. Post-Install
     * It is highly recommended to create your own USB kext. Please use [this](https://dortania.github.io/USB-Map-Guide/) as a proper guide to map your USB ports.
 
 # Additional Kexts
