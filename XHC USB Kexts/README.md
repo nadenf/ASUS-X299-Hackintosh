@@ -13,6 +13,7 @@ Zipped files include the USBKext and a screenshot of ports and their locations.
 
 | File | Motherboard | SMBIOS | Credits |
 | :------- | :---------- | :---------- | :---------- |
+|`Prime X299 Deluxe II.zip` | ASUS Prime X299 Deluxe II | MacPro7,1 | Shinoki7
 |`Pro WS X299 Sage II.zip` | ASUS Pro WS X299 Sage II | MacPro7,1 | Shinoki7
 |`Rampage VI Extreme Encore.zip` | ASUS Rampage VI Extreme Encore | MacPro7,1 | Shinoki7
 |`WS X299 Sage 10G.zip` | ASUS WS X299 Sage/10G | MacPro7,1 | Shinoki7
