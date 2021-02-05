@@ -4,7 +4,7 @@
 The XHC USB Kext folder contains full USB mappings made by users for different motherboards.
 Some motherboards full under the 15 port limit and do not need XhciPortLimit enabled.  If it's required, it's noted in the table below.
 The kexts are broken out by Motherboard and SMBIOS it was built for.  
-* [Dortania USB Map Guide](https://dortania.github.io/OpenCore-Post-Install/)
+* [Dortania USB Map Guide](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html)
 * [Alternative guide](https://www.tonymacx86.com/threads/the-new-beginners-guide-to-usb-port-configuration.286553/) using Hackintool
 
 

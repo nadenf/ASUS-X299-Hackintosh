@@ -14,7 +14,7 @@ The Base EFI folder contains a prebuilt EFI that should be valid for all ASUS X2
     * For users with I211 NICs like the X299 Deluxe, copy the [SmallTreeIntel82576](https://github.com/khronokernel/SmallTree-I211-AT-patch/releases) kext to your EFI folder and add a new kext entry under `Kernel-Add`
 2. PlatformInfo: 
     The Base EFI contains two config.plist depending on which SMBIOS you choose.  Rename the SMBIOS you prefer to 'config.plist' and delete the other one.  
-    You will need to create your own Serial Number and SMUUID.  Instructions can be found [here](https://dortania.github.io/OpenCore-Desktop-Guide/config-HEDT/skylake-x.html#platforminfo)
+    You will need to create your own Serial Number and SMUUID.  Instructions can be found [here](https://dortania.github.io/OpenCore-Install-Guide/config-HEDT/skylake-x.html#platforminfo)
     * Remember to adjust the Type depending on which SMBIOS you are using.  Either iMacPro1,1 or MacPro7,1
     * NOTE: MacPro7,1 only works on Catalina and higher.
     * Using your results from GenSMBIOS, adjust the following (replace '[Removed]')
@@ -23,7 +23,7 @@ The Base EFI folder contains a prebuilt EFI that should be valid for all ASUS X2
             * SystemSerialNumber: Serial
             * SystemUUID: SmUUID
 3. Post-Install
-    * It is highly recommended to create your own USB kext. Please use [this](https://dortania.github.io/USB-Map-Guide/) as a proper guide to map your USB ports.
+    * It is highly recommended to create your own USB kext. Please use [this](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html) as a proper guide to map your USB ports.
     
 ## Changelog:
 ### OpenCore 0.6.6 (2021.02.04)

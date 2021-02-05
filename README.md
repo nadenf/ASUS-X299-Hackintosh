@@ -9,7 +9,7 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 | BASE-EFI | OpenCore EFIs with the OpenCanary GUI that should be valid for all ASUS X299 boards.|
 | Custom BIOS Collection | Contains modified BIOS files that have custom boot logos |
 | EFI-Validated-Distributions | Validated EFIs from other users (Please use this as a reference only) | 
-| XHC USB Kexts | USB kexts created by users for specific motherboards.  Please use [this](https://dortania.github.io/USB-Map-Guide/) as a proper guide to map your USB ports. |
+| XHC USB Kexts | USB kexts created by users for specific motherboards.  Please use [this](https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html) as a proper guide to map your USB ports. |
 
 # Personal Build Specifications
 ![](/Images/aboutthismac.png)
@@ -80,9 +80,6 @@ The ASUS WS X299 Sage series (WS X299 Sage, WS X299 Sage/10G, Pro WS X299 Sage I
   * Version 1.3 is for macOS Catalina, Version 1.2.5 is for macOS 10.13 and 10.14
 * [AGPMInjector](https://github.com/Pavo-IM/AGPMInjector) 
   * Apple Graphics Power Management injector
-  
-# macOS Big Sur Installation
-Refer to [Dortania Big Sur Section](https://dortania.github.io/OpenCore-Install-Guide/extras/big-sur/) for more information and known issues.
 
 # Credits
 * Apple : macOS
