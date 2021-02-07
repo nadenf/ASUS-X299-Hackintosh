@@ -25,6 +25,8 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 * Case : Lian Li PC 011 Dynamic
 
 ## Additional Components / Peripherals
+* Intel X550-T2 10 G Ethernet Card
+    * EEPROM modded with Sonnet device id
 * 2X Gigabyte Titan Ridge Thunderbolt 3 Card 
     * Flashed with custom NVM50 firmware
 * Apple Magic Keyboard 2 (Space Gray)
@@ -40,7 +42,8 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 * Wifi and Bluetooth (Using natively supported Broadcom BCM943602CDP)
 * Handoff, Continuity, AirDrop, Continuity Camera, and Unlock with Apple Watch
 * iMessage, FaceTime, App Store, iTunes Store
-* 2.5 Gb Ethernet
+* 2.5 G Ethernet
+* 10 G Ethernet
 * HEVC, H.264
 * Onboard audio
 * TRIM
@@ -72,7 +75,7 @@ The ASUS WS X299 Sage series (WS X299 Sage, WS X299 Sage/10G, Pro WS X299 Sage I
 * [SmallTreeIntel8259x](https://small-tree.com/support/downloads/10-gigabit-ethernet-driver-download-page/) 
   * Enables built-in Intel 10G ethernet ports on the Sage/10G.
   * Install the version compatible with your version of macOS.
-  * Ubuntu EEPROM modding in @KGPs [guide section E.8.2.2](https://www.tonymacx86.com/threads/how-to-build-your-own-imac-pro-successful-build-extended-guide.229353/) is required for this kext to work.
+  * Ubuntu EEPROM modding in from [MacRumors thread](https://forums.macrumors.com/threads/modify-retail-intel-10gbe-nics-to-use-small-tree-macos-drivers.1968456/) is required for this kext to work.
 * [IntelMausi](https://github.com/acidanthera/IntelMausi/releases)
   * Enables ethernet for most intel controllers
 * [SmallTreeIntel82576](https://github.com/khronokernel/SmallTree-I211-AT-patch/releases)
