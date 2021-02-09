@@ -39,7 +39,7 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 - [x] Native NVRAM
 - [x] CPU Power Management
 - [x] USB Power
-- [o] SideCar due to some T2 chip dependancies on MacPro7,1 and iMacPro1,1 SMBIOS (Using Duet Display as alternative)
+- [ ] SideCar due to some T2 chip dependancies on MacPro7,1 and iMacPro1,1 SMBIOS (Using Duet Display as alternative)
 
 ## BIOS Settings
 * Based off Pro WS X299 Sage II on BIOS 0901 but should be valid for any Asus X299 Motherboard running the latest BIOS.
@@ -67,9 +67,9 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 
 ### Boot
 * Above 4G Decoding - **[On]**
-    #### CSM (Compatability Support Module)
+#### CSM (Compatability Support Module)
 * Launch CSM - **[Disabled]**
-    #### Secure Boot
+#### Secure Boot
 * OS Type - Other OS
 
 ## Comments
