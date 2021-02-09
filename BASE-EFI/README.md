@@ -4,9 +4,7 @@
 The Base EFI folder contains a prebuilt EFI that should be valid for all ASUS X299 motherboards.  It is currently built using OpenCore 0.6.6 with the OpenCanary GUI enabled following the Dortania OpenCore Vanilla Guide.
 
 ## 1. Important BIOS Settings
-* Above 4G Encoding: Enabled
-* MSR Lock: Disabled
-* CSM: Disabled
+Refer to section [BIOS Settings](https://github.com/shinoki7/ASUS-X299-Hackintosh#bios-settings)
 
 ## 2. Configuration
 1. Ethernet: 
