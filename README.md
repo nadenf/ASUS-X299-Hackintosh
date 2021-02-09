@@ -52,14 +52,14 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 #### CPU Configuration
 * MSR Lock Control - **[Disabled]**
     ##### CPU Power Management Configuration
-* Enhanced Intel SpeedStep Technology - Enabled
-* Turbo Mode - Enabled
-* Autonomous Core C-State - Enabled
-* Enhanced Halt State (C1E) - Enabled
-* CPU C6 Report - Enabled
-* Package C State - C6(non Retention) state
-* Intel(R) Speed Shift Technology - Enabled
-* MFC Mode Override - OS Native Support
+    * Enhanced Intel SpeedStep Technology - Enabled
+    * Turbo Mode - Enabled
+    * Autonomous Core C-State - Enabled
+    * Enhanced Halt State (C1E) - Enabled
+    * CPU C6 Report - Enabled
+    * Package C State - C6(non Retention) state
+    * Intel(R) Speed Shift Technology - Enabled
+    * MFC Mode Override - OS Native Support
 #### System Agent (SA) Configuration
 * Intel VT for Directed I/O (VT-d) - Enabled
 #### PCH Storage Configuration
