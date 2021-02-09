@@ -13,56 +13,59 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 
 # Personal Build Specifications
 ![](/Images/aboutthismac.png)
-## Components
-* Motherboard : ASUS Pro WS X299 Sage II
-    * BIOS 0901
-* Processor : Intel i9-10980XE
-* CPU Cooler : Corsair H150i Pro RGB
-* RAM : 4x16 Corsair Dominator Platinum RGB 3200 Mhz
-* Boot Drive : Samsung 970 EVO 1 TB
-* Graphics Card : Sapphire RX 580 Pulse 8 GB
-* Power Supply : Corsair RM 850x
-* Case : Lian Li PC 011 Dynamic
+| Component        | Model                                |
+| ---------------- | ---------------------------------------|
+| Motherboard | ASUS Pro WS X299 Sage II |
+| Processor | Intel i9-10980XE |
+| CPU Cooler | Corsair H150i Pro RGB |
+| RAM | 4x16 Corsair Vengeance LPX 3200 Mhz |
+| Boot Drive | Samsung 970 EVO 1 TB |
+| Graphics Card | Sapphire RX 580 Pulse 8 GB |
+| Power Supply | Corsair RM 850x |
+| Case | Lian Li PC 011 Dynamic |
 
-## Additional Components / Peripherals
-* Intel X550-T2 10 G Ethernet Card
-    * EEPROM modded with Sonnet device id
-* 2X Gigabyte Titan Ridge Thunderbolt 3 Card 
-    * Flashed with custom NVM50 firmware
-* Apple Magic Keyboard 2 (Space Gray)
-* Apple Magic Trackpad 2 (Space Gray)
-* Apple Magic Mouse 2 (Space Gray)
-* LG 27UL600 27" 4K UHD Monitor
-* LG 27UL600 27" 4K UHD Monitor
-* LG 27UK600 27" 4K UHD Monitor
-* LG C9 65" 4K UHD TV
+## What Works / What Doesn't Work
+- [x] Sleep / Wake
+- [x] Wifi and Bluetooth (Using natively supported Broadcom BCM943602CDP)
+- [x] Handoff, Continuity, AirDrop, Continuity Camera, and Unlock with Apple Watch
+- [x] iMessage, FaceTime, App Store, iTunes Store
+- [x] 2.5 G Ethernet
+- [x] HEVC, H.264
+- [x] Onboard audio
+- [x] TRIM
+- [x] USB 2.0 / USB 3.0
+- [x] USB 3.1 Gen 2
+- [x] DRM
+- [x] Native NVRAM
+- [x] CPU Power Management
+- [x] USB Power
+- [] SideCar due to some T2 chip dependancies on MacPro7,1 and iMacPro1,1 SMBIOS (Using Duet Display as alternative)
 
-## What Works
-* Sleep / Wake
-* Wifi and Bluetooth (Using natively supported Broadcom BCM943602CDP)
-* Handoff, Continuity, AirDrop, Continuity Camera, and Unlock with Apple Watch
-* iMessage, FaceTime, App Store, iTunes Store
-* 2.5 G Ethernet
-* 10 G Ethernet
-* HEVC, H.264
-* Onboard audio
-* TRIM
-* USB 2.0 / USB 3.0
-* USB 3.1 Gen 2
-* Thunderbolt 3 w/ hot plug including Thunderbolt Local Node and Thunderbolt Bus. Credits @CaseySJ and contributors in his [thread](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.267551/)
-* DRM
-* Native NVRAM
-* CPU Power Management
-* USB Power
+## BIOS Settings
+* Based off Pro WS X299 Sage II on BIOS 0901 but should be valid for any Asus X299 Motherboard running the latest BIOS.
+* Reset to Default Settings before changing these settings
 
-## What Doesn't Work
-* SideCar due to some T2 chip dependancies on MacPro7,1 and iMacPro1,1 SMBIOS (Using Duet Display as alternative)
+### AI Tweaker
+* AI Overclock Tuner - Enabled
+
+### Advanced
+#### CPU Configuration
+* MSR Lock Control - **[Disabled]**
+##### CPU Power Management Configuration
+* Enhanced Intel SpeedStep Technology - Enabled
+* Turbo Mode - Enabled
+* Autonomous Core C-State - Enabled
+* Enhanced Halt State (C1E) - Enabled
+* CPU C6 Report - Enabled
+* Package C State - C6(non Retention) state
+* Intel(R) Speed Shift Technology - Enabled
+* MFC Mode Override - OS Native Support
 
 ## Comments
 The ASUS WS X299 Sage series (WS X299 Sage, WS X299 Sage/10G, Pro WS X299 Sage II) are great motherboards with 7 PCIe slots running at 16x/8x/8x/8x/8x/8x/8x and multiple M.2/U.2 connections.  The Sage/10G even includes dual 10Gb Intel X550-AT2 LAN ports that are compatible with macOS. Unfortunately the motherboards only have a few USB ports and only a single 19 Pin USB 3.0 header for internal ports.  In order to connect internal USB devices such as Bluetooth or RGB Controllers there are a few options.  Note that the specific cables/card listed below are examples.  Just make sure the PCIe card is compatible with macOS.
 * 1. [USB 3.0 20 Pin Female to USB 2.0 Pin Male Adapter](https://www.amazon.com/gp/product/B01MFB04JP/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
-    * With this you will not have a USB 3.0 header to connect to the front of your case
-    * Currently using this in my build with a [USB 2.0 9 Pin Header 1 to 4 Extension Hub Splitter](https://www.amazon.com/gp/product/B085KVH16T/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) to connect Bluetooth and the USB 2.0 cables for my 2 thunderbolt 3 cards.
+    * This adapter converts the internal USB 3.0 19 pin header to a USB 2.0 9 pin.
+    * Currently using this in my build with a [USB 2.0 9 Pin Header 1 to 4 Extension Hub Splitter](https://www.amazon.com/gp/product/B085KVH16T/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) to connect Bluetooth.
 * 2. [USB 2.0 IDC 5 Male to USB A Male adapter](https://www.amazon.com/gp/product/B000V6WD8A/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
     * Uses one of the USB ports on the back of the motherboard to connect internal devices in the case.  You can get two of these and remove 1 of the pins to make a "9 pin internal adapter".  If the cable is too short from the back to inside the case, you can get some regular USB A extension cables.
 * 3. PCIe USB 3.0 Card with Internal USB Connector
