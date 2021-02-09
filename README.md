@@ -39,7 +39,7 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 - [x] Native NVRAM
 - [x] CPU Power Management
 - [x] USB Power
-- [] SideCar due to some T2 chip dependancies on MacPro7,1 and iMacPro1,1 SMBIOS (Using Duet Display as alternative)
+- [o] SideCar due to some T2 chip dependancies on MacPro7,1 and iMacPro1,1 SMBIOS (Using Duet Display as alternative)
 
 ## BIOS Settings
 * Based off Pro WS X299 Sage II on BIOS 0901 but should be valid for any Asus X299 Motherboard running the latest BIOS.
@@ -51,7 +51,7 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 ### Advanced
 #### CPU Configuration
 * MSR Lock Control - **[Disabled]**
-##### CPU Power Management Configuration
+    ##### CPU Power Management Configuration
 * Enhanced Intel SpeedStep Technology - Enabled
 * Turbo Mode - Enabled
 * Autonomous Core C-State - Enabled
@@ -60,6 +60,17 @@ The ASUS X299 Hackintosh repo contains OpenCore EFI distributions and related fi
 * Package C State - C6(non Retention) state
 * Intel(R) Speed Shift Technology - Enabled
 * MFC Mode Override - OS Native Support
+#### System Agent (SA) Configuration
+* Intel VT for Directed I/O (VT-d) - Enabled
+#### PCH Storage Configuration
+* SATA Mode Selection - AHCI
+
+### Boot
+* Above 4G Decoding - **[On]**
+    #### CSM (Compatability Support Module)
+* Launch CSM - **[Disabled]**
+    #### Secure Boot
+* OS Type - Other OS
 
 ## Comments
 The ASUS WS X299 Sage series (WS X299 Sage, WS X299 Sage/10G, Pro WS X299 Sage II) are great motherboards with 7 PCIe slots running at 16x/8x/8x/8x/8x/8x/8x and multiple M.2/U.2 connections.  The Sage/10G even includes dual 10Gb Intel X550-AT2 LAN ports that are compatible with macOS. Unfortunately the motherboards only have a few USB ports and only a single 19 Pin USB 3.0 header for internal ports.  In order to connect internal USB devices such as Bluetooth or RGB Controllers there are a few options.  Note that the specific cables/card listed below are examples.  Just make sure the PCIe card is compatible with macOS.
